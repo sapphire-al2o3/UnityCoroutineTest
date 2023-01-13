@@ -34,6 +34,7 @@ public class Test : MonoBehaviour
 		while (e.MoveNext())
 		{
 			//yield return e.Current;
+			yield return null;
 		}
 	}
 
