@@ -40,6 +40,7 @@ public class Test : MonoBehaviour
 
 	void Start()
     {
-		StartCoroutine(Wait());
+		//StartCoroutine(Wait());
+		StartCoroutine(CallTestA());
     }
 }
