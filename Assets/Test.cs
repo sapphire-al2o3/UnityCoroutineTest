@@ -10,7 +10,7 @@ public class Test : MonoBehaviour
 		Debug.Log($"Test:0 {Time.frameCount}");
 		yield return null;
 		Debug.Log($"Test:1 {Time.frameCount}");
-		yield return null;
+		yield return new WaitForSeconds(0.1f);
 		Debug.Log($"Test:2 {Time.frameCount}");
 	}
 
