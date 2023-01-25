@@ -6,12 +6,13 @@ public class Test : MonoBehaviour
 {
     IEnumerator TestCor()
     {
-        yield return null;
         Debug.Log($"Test:0 {Time.frameCount}");
         yield return null;
         Debug.Log($"Test:1 {Time.frameCount}");
-        yield return new WaitForSeconds(0.1f);
+        yield return null;
         Debug.Log($"Test:2 {Time.frameCount}");
+        yield return new WaitForSeconds(0.1f);
+        Debug.Log($"Test:3 {Time.frameCount}");
     }
 
     IEnumerator CallTestA()
@@ -33,8 +34,8 @@ public class Test : MonoBehaviour
         var e = CallTestB();
         while (e.MoveNext())
         {
-            //yield return e.Current;
-            yield return null;
+            yield return e.Current;
+            //yield return null;
         }
     }
 
