@@ -11,7 +11,8 @@ public class Test : MonoBehaviour
         Debug.Log($"Test:1 {Time.frameCount}");
         yield return null;
         Debug.Log($"Test:2 {Time.frameCount}");
-        yield return new WaitForSeconds(0.1f);
+        int count = 10;
+        yield return new WaitUntil(() => count-- < 0);
         Debug.Log($"Test:3 {Time.frameCount}");
     }
 
