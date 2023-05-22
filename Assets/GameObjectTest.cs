@@ -18,6 +18,12 @@ public class GameObjectTest : MonoBehaviour
         Debug.Log("hoge");
         yield return new WaitForSeconds(2f);
         Debug.Log("finish");
+
+        if (this == null)
+        {
+            Debug.Log("may be destroyed");
+        }
+
         if (gameObject == null)
         {
             Debug.Log("destroyed");
